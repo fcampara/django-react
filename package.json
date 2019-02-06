@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "react-django",
   "version": "1.0.0",
   "description": "- Run ```sh   $ python manage.py runserver ```",
   "main": "index.js",
