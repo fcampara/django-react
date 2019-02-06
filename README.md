@@ -9,7 +9,7 @@
   $ pipenv shell
 ```
 
-### Commands
+### Commands - Django
 - Install depedency
 ```sh
   $ pipenv install django djangorestframework django-rest-knox
@@ -31,7 +31,12 @@
   $ python manage.py migrate
 ```
 
-- Create
+- Frontend requirements
+```sh
+  $ npm i -D webpack webpack-cli
+  $ npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-plugin-transform-class-properties
+  $ npm i react react-dom prop-types
+```
 
 # Commands
 
