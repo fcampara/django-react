@@ -44,6 +44,6 @@
 | Route                     | Methods |
 | ------------------------- | ------- |
 | **HOST**/api/leads        | GET     |
-| **HOST**/api/leads/**id** | GET     |
+| **HOST**/api/leads/**ID** | GET     |
 | **HOST**/api/leads/       | POST    |
-| **HOST**/api/leads/**id** | DELETE  |
+| **HOST**/api/leads/**ID** | DELETE  |
