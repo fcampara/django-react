@@ -17,7 +17,7 @@ export class Header extends Component {
           <TableCell padding="checkbox">
             <Checkbox
               indeterminate={numSelected > 0 && numSelected < rowCount}
-              checked={numSelected === rowCount}
+              checked={numSelected === rowCount && rowCount !== 0}
               onChange={onSelectAllClick}
             />
           </TableCell>

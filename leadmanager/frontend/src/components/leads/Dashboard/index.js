@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { FormsLeads } from '../Forms'
+import { FormsLeads } from '../Leads/Forms'
 import { Leads } from '../Leads'
 
 class index extends Component {

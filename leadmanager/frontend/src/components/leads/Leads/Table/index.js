@@ -75,7 +75,7 @@ class index extends Component {
 
   render() {
     const { selected } = this.state
-    const { classes, leads } = this.props
+    const { leads } = this.props
 
     return (
       <Grid>
