@@ -21,7 +21,7 @@ export default function(state = initialState, action) {
     case SAVE_LEAD:
       return {
         ...state,
-        leads: state.leads.push(aciton.payload)
+        leads: [...state.leads, action.payload]
       }
 
     default:
