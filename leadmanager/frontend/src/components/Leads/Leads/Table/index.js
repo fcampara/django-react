@@ -76,7 +76,6 @@ class index extends Component {
   render() {
     const { selected } = this.state
     const { leads } = this.props
-    console.log(leads)
     return (
       <Grid>
         <TableToolbar
