@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 import Button from '@material-ui/core/Button'
 import { MuiThemeProvider } from '@material-ui/core/styles'
@@ -12,17 +12,14 @@ import store from '../store'
 
 import { theme } from '../theme'
 import { Header } from './Layout/Header'
-import { Dashboard } from './Leads/Dashboard'
 import { Notifier } from './Notifier'
-import { Login } from './Authenticate/Login'
-import { Register } from './Authenticate/Register'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import RenderRoutes from '../routes/render'
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Header />
         <SnackbarProvider
           maxSnack={3}
           action={[
@@ -33,14 +30,11 @@ class App extends Component {
         >
           <Router>
             <MuiThemeProvider theme={theme}>
+              <Header />
               <Fragment>
                   <CssBaseline/>
                   <Notifier/>
-                  <Switch>
-                    <Route exact path="/" component={Dashboard}/>
-                    <Route exact path="/login" component={Login}/>
-                    <Route exact path="/register" component={Register}/>
-                  </Switch>
+                  <RenderRoutes/>
               </Fragment>
             </MuiThemeProvider>
           </Router>

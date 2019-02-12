@@ -14,18 +14,6 @@ import ClearIcon from '@material-ui/icons/Clear'
 import { saveLead } from '../../../../actions/leads'
 import { enqueueSnackbar } from '../../../../actions/notifier'
 
-const styles = theme => ({
-  root: {
-    ...theme.mixins.gutters(),
-    margin: 10,
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-  },
-  button: {
-    margin: 10
-  }
-});
-
 class index extends Component {
 
   constructor(props) {
@@ -67,7 +55,7 @@ class index extends Component {
     const { name, email, message } = this.state
 
     return (
-      <Paper className={classes.root} elevation={1}>
+      <Paper elevation={1}>
         <Grid container direction="row" spacing={32}>
           <Grid item xs={6}>
             <TextField
@@ -100,13 +88,9 @@ class index extends Component {
           <SaveIcon/>
             Save
           </Button>
-          <Button className={classes.button} variant="contained" onClick={this.clearForm}>
+          <Button variant="contained" onClick={this.clearForm}>
             <ClearIcon/>
             Clear
-          </Button>
-          <Button className={classes.button} variant="contained" onClick={this.notifier}>
-            <ClearIcon/>
-            Notifier
           </Button>
       </Paper>
     )
@@ -118,4 +102,4 @@ const mapDispatchToProps = dispatch => ({
   saveLead: (name, email, message) => dispatch(saveLead(name, email, message))
 })
 
-export const FormsLeads = connect(null, mapDispatchToProps)(withStyles(styles)(index))
+export const FormsLeads = connect(null, mapDispatchToProps)(index)

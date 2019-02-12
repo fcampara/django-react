@@ -1,18 +1,19 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { palette } from './palette'
 import { MuiPaper } from './MuiPaper'
-
-const teste = createMuiTheme()
+import { MuiButton } from './MuiButton'
+import { MuiAppBar } from './MuiAppBar'
+import { MuiDrawer } from './MuiDrawer'
 
 export const theme = createMuiTheme({
   palette,
-  overrides: {
-    MuiPaper: {
-      boxShadow: 'dark',
-      margin: 50,
-    },
+  typography: {
+    useNextVariants: true
   },
-  label: {
-    textTransform: 'capitalize'
+  overrides: {
+    MuiPaper,
+    MuiAppBar,
+    MuiDrawer,
+    MuiButton
   }
 })
