@@ -12,6 +12,7 @@
   $ pip3 install pipenv
   $ pipenv shell
 ```
+# Commands
 
 ### Commands - Django
 - Install depedency
@@ -42,12 +43,13 @@
   $ npm i react react-dom prop-types
 ```
 
-# Commands
 
 - Run
 ```sh
   $ python manage.py runserver
 ```
+
+### Comands - React
 
 ```sh
   $ npm run dev
