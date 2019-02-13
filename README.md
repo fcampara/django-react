@@ -5,6 +5,10 @@
 
 ### Installation
 ```sh
+  $ sudo apt install python3-pip python3-dev
+  $ pip3 install --user pipenv
+  echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
+  source ~/.bashrc
   $ pip3 install pipenv
   $ pipenv shell
 ```
@@ -45,6 +49,11 @@
   $ python manage.py runserver
 ```
 
+```sh
+  $ npm run dev
+```
+
+# Routes
 
 | Route                     | Methods |
 | ------------------------- | ------- |
