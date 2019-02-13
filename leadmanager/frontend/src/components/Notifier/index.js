@@ -17,23 +17,23 @@ class index extends Component {
   }
 
   shouldComponentUpdate({ notifications: newSnacks = [] }) {
-    const { notifications: currentSnacks } = this.props;
-    let notExists = false;
+    const { notifications: currentSnacks } = this.props
+    let notExists = false
     for (let i = 0; i < newSnacks.length; i++) {
-      if (notExists) continue;
-      notExists = notExists || !currentSnacks.filter(({ key }) => newSnacks[i].key === key).length;
+      if (notExists) continue
+      notExists = notExists || !currentSnacks.filter(({ key }) => newSnacks[i].key === key).length
     }
-    return notExists;
+    return notExists
   }
 
   componentDidUpdate() {
     const { displayed } = this.state
-    const { notifications = [] } = this.props;
+    const { notifications = [] } = this.props
     notifications.forEach(notification => {
-        if (displayed.includes(notification.key)) return;
-        this.props.enqueueSnackbar(notification.message, notification.options);
-        this.storeDisplayed(notification.key);
-        this.props.removeSnackbar(notification.key);
+        if (displayed.includes(notification.key)) return
+        this.props.enqueueSnackbar(notification.message, notification.options)
+        this.storeDisplayed(notification.key)
+        this.props.removeSnackbar(notification.key)
       })
 
     }
@@ -47,6 +47,6 @@ const mapStateToProps = store => ({
   notifications: store.notifier.notifications
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ removeSnackbar }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ removeSnackbar }, dispatch)
 
 export const Notifier = connect(mapStateToProps, mapDispatchToProps)(withSnackbar(index))
