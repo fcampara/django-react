@@ -49,7 +49,7 @@
   $ python manage.py runserver
 ```
 
-### Comands - React
+### Commands - React
 
 ```sh
   $ npm run dev
