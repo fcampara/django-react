@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
@@ -26,15 +26,18 @@ class Header extends Component {
   }
 
   render () {
-    const { classes } = this.props
+    const { classes, isAuthenticated } = this.props
     const { open } = this.state
     return (
         <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer" onClick={() => this.onToggle(true)}>
-              <MenuIcon/>
-            </IconButton>
+            {
+              isAuthenticated &&
+              <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer" onClick={() => this.onToggle(true)}>
+                <MenuIcon/>
+              </IconButton>
+            }
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               Lead Manager
             </Typography>
@@ -59,4 +62,8 @@ class Header extends Component {
   }
 }
 
-export default withStyles(styles)(Header)
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps)(withStyles(styles)(Header))

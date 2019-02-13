@@ -30,6 +30,9 @@ class index extends Component {
           confirmPassword={confirmPassword}
           onChange={this.onChange}
         />
+        <Button>
+          Register
+        </Button>
       </Paper>
     )
   }

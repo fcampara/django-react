@@ -14,9 +14,14 @@ import { theme } from '../theme'
 import { Header } from './Layout/Header'
 import { Notifier } from './Notifier'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import RenderRoutes from '../routes/render'
+import { RenderRoutes } from '../routes/render'
+import { loadUser } from '../actions/auth'
 
 class App extends Component {
+  componentDidMount () {
+    store.dispatch(loadUser())
+  }
+
   render() {
     return (
       <Provider store={store}>

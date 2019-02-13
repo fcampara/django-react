@@ -1,4 +1,4 @@
-import { Dashboard } from '../components/Leads/Dashboard'
+import { Dashboard } from '../components/Leads'
 
 export const app = [
   {
