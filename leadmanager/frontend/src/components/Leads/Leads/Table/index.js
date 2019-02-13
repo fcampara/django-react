@@ -41,24 +41,24 @@ class index extends Component {
     }
 
     this.handleClick = (event, id) => {
-      const { selected } = this.state;
-      const selectedIndex = selected.indexOf(id);
-      let newSelected = [];
+      const { selected } = this.state
+      const selectedIndex = selected.indexOf(id)
+      let newSelected = []
 
       if (selectedIndex === -1) {
-        newSelected = newSelected.concat(selected, id);
+        newSelected = newSelected.concat(selected, id)
       } else if (selectedIndex === 0) {
-        newSelected = newSelected.concat(selected.slice(1));
+        newSelected = newSelected.concat(selected.slice(1))
       } else if (selectedIndex === selected.length - 1) {
-        newSelected = newSelected.concat(selected.slice(0, -1));
+        newSelected = newSelected.concat(selected.slice(0, -1))
       } else if (selectedIndex > 0) {
         newSelected = newSelected.concat(
           selected.slice(0, selectedIndex),
-          selected.slice(selectedIndex + 1),
-        );
+          selected.slice(selectedIndex + 1)
+        )
       }
 
-      this.setState({ selected: newSelected });
+      this.setState({ selected: newSelected })
     }
 
     this.handleSelectAllClick = ({ target: { checked }}) => {
@@ -70,7 +70,7 @@ class index extends Component {
       this.setState({ selected: [] })
     }
 
-    this.isSelected = id => this.state.selected.indexOf(id) !== -1;
+    this.isSelected = id => this.state.selected.indexOf(id) !== -1
   }
 
   render() {

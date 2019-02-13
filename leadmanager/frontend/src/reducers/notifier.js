@@ -2,7 +2,7 @@ import { ENQUEUE_SNACKBAR, REMOVE_SNACKBAR } from '../actions/types'
 
 const defaultState = {
   notifications: [],
-};
+}
 
 export default (state = defaultState, action) => {
   switch (action.type) {
@@ -13,20 +13,20 @@ export default (state = defaultState, action) => {
               notifications: [
                   ...state.notifications,
                   {
-                      ...action.notification,
-                  },
-              ],
-          };
+                      ...action.notification
+                  }
+              ]
+          }
 
       case REMOVE_SNACKBAR:
           return {
               ...state,
               notifications: state.notifications.filter(
-                  notification => notification.key !== action.key,
-              ),
-          };
+                  notification => notification.key !== action.key
+              )
+          }
 
       default:
-          return state;
+          return state
   }
-};
+}

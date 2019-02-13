@@ -9,7 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox'
 
 export class Header extends Component {
   render() {
-    const { onSelectAllClick, order, orderBy, numSelected, rowCount } = this.props;
+    const { onSelectAllClick, order, orderBy, numSelected, rowCount } = this.props
 
     return (
       <TableHead>

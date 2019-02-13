@@ -49,7 +49,7 @@ export class TableToolbar extends Component {
             )}
           </div>
         </Toolbar>
-      );
+      )
   }
 }
 

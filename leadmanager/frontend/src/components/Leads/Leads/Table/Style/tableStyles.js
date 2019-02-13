@@ -8,5 +8,5 @@ export const tableStyles = theme => ({
     },
     tableWrapper: {
       overflowX: 'auto',
-    },
-  });
+    }
+  })

@@ -46,8 +46,8 @@ class index extends Component {
       message: 'Failed fetching data.',
       options: {
           variant: 'warning',
-      },
-  });
+      }
+  })
   }
 
   render() {

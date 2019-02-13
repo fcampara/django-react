@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withSnackbar } from 'notistack'
 import { bindActionCreators } from 'redux'
-import { enqueueSnackbar, removeSnackbar } from '../../actions/notifier'
+import { removeSnackbar } from '../../actions/notifier'
 
 class index extends Component {
   constructor(props) {
